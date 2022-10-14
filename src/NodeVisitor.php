@@ -336,26 +336,22 @@ class NodeVisitor extends NodeVisitorAbstract
 
         if ($node instanceof Function_) {
             return $this->needsFunctions
-                && $this->count('functions', $fullyQualifiedName)
-                && !function_exists($fullyQualifiedName);
+                && $this->count('functions', $fullyQualifiedName);
         }
 
         if ($node instanceof Class_) {
             return $this->needsClasses
-                && $this->count('classes', $fullyQualifiedName)
-                && !class_exists($fullyQualifiedName);
+                && $this->count('classes', $fullyQualifiedName);
         }
 
         if ($node instanceof Interface_) {
             return $this->needsInterfaces
-                && $this->count('interfaces', $fullyQualifiedName)
-                && !interface_exists($fullyQualifiedName);
+                && $this->count('interfaces', $fullyQualifiedName);
         }
 
         if ($node instanceof Trait_) {
             return $this->needsTraits
-                && $this->count('traits', $fullyQualifiedName)
-                && !trait_exists($fullyQualifiedName);
+                && $this->count('traits', $fullyQualifiedName);
         }
 
         if ($this->needsConstants) {

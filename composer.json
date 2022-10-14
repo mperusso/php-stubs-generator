@@ -1,5 +1,5 @@
 {
-    "name": "php-stubs/generator",
+    "name": "mperusso/php-stubs-generator",
     "description": "Generate stubs from any PHP code for IDE completion and static analysis.",
     "type": "library",
     "license": "MIT",
