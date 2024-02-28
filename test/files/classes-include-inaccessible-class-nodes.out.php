@@ -6,7 +6,12 @@ abstract class A extends \B implements \C
     protected const A = 'B';
 
     /** doc */
+    private const B = 'C';
+
+    /** doc */
     public static $a = 'a';
+
+    private static $b = 'b';
 
     /** doc */
     public static function b($a): void
@@ -23,6 +28,11 @@ abstract class A extends \B implements \C
 
     /** doc */
     protected abstract function e($a) : string;
+
+    /** doc */
+    private function f($a): void
+    {
+    }
 }
 
 class D
@@ -38,7 +48,15 @@ final class E
     public $a = 'a';
 
     /** doc */
+    protected $b = 'b';
+
+    /** doc */
     public function a($a) : void
+    {
+    }
+
+    /** doc */
+    protected function b($a): void
     {
     }
 }
@@ -69,6 +87,16 @@ final class G
 
     /** doc */
     public function b($a): string
+    {
+    }
+
+    /** doc */
+    protected function c($a): string
+    {
+    }
+
+    /** doc */
+    private function d($a): string
     {
     }
 }
